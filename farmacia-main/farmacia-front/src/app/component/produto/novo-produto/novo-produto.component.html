@@ -1,0 +1,36 @@
+
+
+<div class="flex-container">
+  <button mat-mini-fab color="primary" routerLink="/produto/lista-produto">
+    <mat-icon>
+      arrow_left
+    </mat-icon>
+  </button>
+
+  <mat-card class="form">
+    <form action="" id="main-form" [formGroup]="formulario" (ngSubmit)="criarProduto()">
+      <h1>Cadastro de Produto</h1>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome do Produto</mat-label>
+        <input type="text" matInput formControlName="nome" name="nome"   [(ngModel)]="produto.nome">
+        <mat-error>
+          Este campo é obrigatório
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>codigo do Produto</mat-label>
+        <input type="text" matInput formControlName="codigo" name="codigo"  [(ngModel)]="produto.codigo" >
+        <mat-error>
+          Este campo é obrigatório
+        </mat-error>
+      </mat-form-field>
+
+
+
+      <button class="btn" mat-raised-button color="warn" type="submit" style="margin-top: 10px;" [disabled]="!validarCampos()">Cadastrar</button>
+
+    </form>
+  </mat-card>
+</div>
+

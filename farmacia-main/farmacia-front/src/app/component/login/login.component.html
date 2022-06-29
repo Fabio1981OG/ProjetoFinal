@@ -1,0 +1,36 @@
+
+
+  <div class="container">
+   <form class="form mat-elevation-z8">
+
+      <h3>Student Success</h3>
+
+
+      <mat-form-field class="full-width" appearance="outline">
+         <mat-label>Matricula</mat-label>
+         <input
+         [formControl]="matricula"
+         required
+         [(ngModel)]="creds.matricula"
+         name="matricula"
+         matInput
+         placeholder="pessoa@soulcode.com">
+         <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+         <mat-label>Senha</mat-label>
+         <input
+         [formControl]="senha"
+         required
+         [(ngModel)]="creds.senha"
+         name="senha"
+         type="password"
+         matInput>
+         <mat-icon matSuffix>password</mat-icon>
+      </mat-form-field>
+
+      <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4">Conecte-se</button>
+   </form>
+  </div>
+<footer class="footer">footer</footer>

@@ -1,0 +1,35 @@
+
+
+<!-- <div class="flex-produto-info"> -->
+
+<div class="flex-container">
+  <button mat-mini-fab color="primary" routerLink="/produto/lista-produto" class="btn-2">
+    <mat-icon>
+      arrow_left
+    </mat-icon>
+  </button>
+
+  <mat-card class="flex-card">
+    <mat-card-content>
+      <mat-card-title> {{ produto.nome }} </mat-card-title>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-subtitle>codigo do produto:</mat-card-subtitle>
+      {{ produto.codigo }}
+    </mat-card-content>
+
+
+
+
+
+
+    <button routerLink="/produto/editar-produto/{{ produto.codigo }}" mat-raised-button color="primary" type="button"
+      style="margin-top: 10px" class="btn">
+      Editar
+    </button>
+  </mat-card>
+</div>
+
+
+
